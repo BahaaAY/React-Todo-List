@@ -10,14 +10,14 @@ export const TodoItem = ({ todo, markAsDoneHandler, deleteTodoHandler }) => {
           markAsDoneHandler(todo);
         }}
       >
-        <img alt="complete task btn image" src="check.svg" />
+        <img alt="complete task btn" src="check.svg" />
       </button>
       <button
         onClick={() => {
           deleteTodoHandler(todo);
         }}
       >
-        <img alt="delete task btn image" src="delete.svg" />
+        <img alt="delete task btn" src="delete.svg" />
       </button>
     </li>
   );

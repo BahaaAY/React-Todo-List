@@ -10,7 +10,7 @@ export const DoneItem = ({ doneTask, deleteDoneHandler }) => {
           deleteDoneHandler(doneTask);
         }}
       >
-        <img alt="delete task btn image" src="delete.svg" />
+        <img alt="delete task btn" src="delete.svg" />
       </button>
     </li>
   );

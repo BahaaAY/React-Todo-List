@@ -57,7 +57,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 60%;
 }
 
 .TodoListWrapper {
@@ -135,4 +135,16 @@
 
 .empty {
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    width: 50%;
+  }
 }

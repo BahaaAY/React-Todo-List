@@ -17,7 +17,7 @@ export const TodoForm = ({ addTodoHandler }) => {
     <form className="TodoForm" onSubmit={addTodo}>
       <input name="taskTitle" type="text" placeholder="Add a new task!" />
       <button type="submit">
-        <img alt="add task button image" src="plus.svg" />
+        <img alt="add task button" src="plus.svg" />
       </button>
     </form>
   );
