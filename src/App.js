@@ -32,12 +32,18 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <TodoForm addTodoHandler={addTodoHandler} />
-        <TodoList
-          todos={todos}
-          markAsDoneHandler={markAsDoneHandler}
-          deleteTodoHandler={deleteTodoHandler}
-        />
-        <DoneList dones={dones} deleteDoneHandler={deleteDoneHandler} />
+        {todos.length === 0 && dones.length === 0 ? (
+          <p className="empty">No tasks to show!</p>
+        ) : (
+          <div className="lists-wrapper">
+            <TodoList
+              todos={todos}
+              markAsDoneHandler={markAsDoneHandler}
+              deleteTodoHandler={deleteTodoHandler}
+            />
+            <DoneList dones={dones} deleteDoneHandler={deleteDoneHandler} />
+          </div>
+        )}
       </div>
     </div>
   );
