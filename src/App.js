@@ -23,6 +23,11 @@ function App() {
     setTodos(newTodos);
   }
 
+  function deleteDoneHandler(done) {
+    let newDones = dones.filter((d) => d !== done);
+    setDones(newDones);
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -32,7 +37,7 @@ function App() {
           markAsDoneHandler={markAsDoneHandler}
           deleteTodoHandler={deleteTodoHandler}
         />
-        <DoneList dones={dones} />
+        <DoneList dones={dones} deleteDoneHandler={deleteDoneHandler} />
       </div>
     </div>
   );
