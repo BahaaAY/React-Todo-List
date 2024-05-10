@@ -1,9 +1,9 @@
 import React from "react";
 
-export const DoneItem = () => {
+export const DoneItem = ({ doneTask }) => {
   return (
     <li className="TodoItem">
-      <p>Task 1</p>
+      <p className="doneTask">{doneTask.title}</p>
       <div className="h-spacer" />
     </li>
   );

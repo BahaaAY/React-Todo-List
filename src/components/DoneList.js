@@ -1,13 +1,15 @@
 import React from "react";
 import { DoneItem } from "./DoneItem";
 
-export const DoneList = () => {
+export const DoneList = ({ dones }) => {
   return (
     <div className="TodoListWrapper">
-      <p>Done - 1</p>
+      <p>Done - {dones.length}</p>
 
       <ul className="TodoList">
-        <DoneItem />
+        {dones.map((done, index) => (
+          <DoneItem key={index} doneTask={done} />
+        ))}
       </ul>
     </div>
   );

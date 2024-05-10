@@ -6,6 +6,7 @@
   --primary-color: #15101c;
   --on-primary-color: #9e78cf;
   --secondary-color: #777777;
+  --done-task-color: #78cfb0;
 }
 .App {
   display: flex;
@@ -117,4 +118,9 @@
 .TodoItem button:hover > img {
   filter: brightness(0) saturate(100%) invert(11%) sepia(52%) saturate(4916%)
     hue-rotate(261deg) brightness(85%) contrast(99%);
+}
+
+.doneTask {
+  text-decoration: line-through;
+  color: var(--done-task-color);
 }

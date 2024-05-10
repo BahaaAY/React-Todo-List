@@ -10,13 +10,14 @@ export const TodoForm = ({ addTodoHandler }) => {
     }
     console.log(taskTitle);
     let todo = { title: taskTitle };
+    e.target.reset();
     addTodoHandler(todo);
   }
   return (
     <form className="TodoForm" onSubmit={addTodo}>
       <input name="taskTitle" type="text" placeholder="Add a new task!" />
       <button type="submit">
-        <img src="plus.svg" />
+        <img alt="add task button image" src="plus.svg" />
       </button>
     </form>
   );

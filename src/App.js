@@ -12,12 +12,27 @@ function App() {
     setTodos([...todos, todo]);
   }
 
+  function markAsDoneHandler(todo) {
+    let newTodos = todos.filter((t) => t !== todo);
+    setTodos(newTodos);
+    setDones([...dones, todo]);
+  }
+
+  function deleteTodoHandler(todo) {
+    let newTodos = todos.filter((t) => t !== todo);
+    setTodos(newTodos);
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
         <TodoForm addTodoHandler={addTodoHandler} />
-        <TodoList todos={todos} />
-        <DoneList done={dones} />
+        <TodoList
+          todos={todos}
+          markAsDoneHandler={markAsDoneHandler}
+          deleteTodoHandler={deleteTodoHandler}
+        />
+        <DoneList dones={dones} />
       </div>
     </div>
   );
