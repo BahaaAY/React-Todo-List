@@ -1,9 +1,9 @@
 import React from "react";
 
-export const TodoItem = () => {
+export const TodoItem = ({ todo }) => {
   return (
     <li className="TodoItem">
-      <p>Task 1</p>
+      <p>{todo.title}</p>
       <div className="h-spacer" />
       <button>
         <img src="check.svg" />

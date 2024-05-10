@@ -1,13 +1,15 @@
 import React from "react";
 import { TodoItem } from "./TodoItem";
 
-export const TodoList = () => {
+export const TodoList = ({ todos }) => {
   return (
     <div className="TodoListWrapper">
-      <p>Tasks to do - 4</p>
+      <p>Tasks to do - {todos.length}</p>
 
       <ul className="TodoList">
-        <TodoItem />
+        {todos.map((todo, index) => (
+          <TodoItem key={index} todo={todo} />
+        ))}
       </ul>
     </div>
   );
